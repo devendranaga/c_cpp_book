@@ -1,3 +1,8 @@
+/**
+ * @Author: Devendra Naga (devendra.aaru@gmail.com)
+ *
+ * License Apache
+ */
 #ifndef __LIST_H__
 #define __LIST_H__
 

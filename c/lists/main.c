@@ -1,3 +1,8 @@
+/**
+ * Author: Devendra Naga (devendra.aaru@gmail.com)
+ *
+ * License apache
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <list.h>

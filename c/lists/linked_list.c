@@ -3,7 +3,7 @@
  *
  * Author: Dev Naga <devendra.aaru@gmail.com>
  *
- * MIT LICENCE
+ * Apache LICENCE
  */
 #include <stdio.h>
 #include <stdlib.h>
