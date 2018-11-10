@@ -38,13 +38,18 @@ rand_num_gen::rand_num_gen()
 
 rand_num_gen::~rand_num_gen()
 {
-    close(fd);
+    if (fd > 0)
+        close(fd);
 }
 
 int rand_num_gen::gen_rand(uint8_t *rand_num)
 {
     int ret;
 
+    if (fd < 0) {
+        return -1;
+    }
+    
     ret = read(fd, rand_num, sizeof(*rand_num));
     if (ret > 0)
         return 0;
@@ -56,6 +61,10 @@ int rand_num_gen::gen_rand(uint16_t *rand_num)
 {
     int ret;
 
+    if (fd < 0) {
+        return -1;
+    }
+    
     ret = read(fd, rand_num, sizeof(*rand_num));
     if (ret > 0)
         return 0;
@@ -67,6 +76,10 @@ int rand_num_gen::gen_rand(uint32_t *rand_num)
 {
     int ret;
 
+    if (fd < 0) {
+        return -1;
+    }
+    
     ret = read(fd, rand_num, sizeof(*rand_num));
     if (ret > 0)
         return 0;
@@ -78,6 +91,10 @@ int rand_num_gen::gen_rand(uint64_t *rand_num)
 {
     int ret;
 
+    if (fd < 0) {
+        return -1;
+    }
+    
     ret = read(fd, rand_num, sizeof(*rand_num));
     if (ret > 0)
         return 0;
@@ -93,6 +110,10 @@ int rand_num_gen::gen_rand(uint64_t *rand_num, uint64_t min, uint64_t max)
         return -1;
     }
 
+    if (fd < 0) {
+        return -1;
+    }
+    
     ret = read(fd, rand_num, sizeof(*rand_num));
     if (ret > 0) {
         *rand_num = *rand_num % (max - min);
@@ -102,6 +123,7 @@ int rand_num_gen::gen_rand(uint64_t *rand_num, uint64_t min, uint64_t max)
 }
 
 
+// test main code for the rand_num_gen class
 int main(int argc, char **argv)
 {
     rand_num_gen r;
