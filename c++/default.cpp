@@ -8,5 +8,6 @@ int add(int a, int b = 4)
 int main()
 {
 	std::cout << "add result " << add(4) << std::endl;
+	std::cout << "add result " << add(4, 8) << std::endl;
 }
 
