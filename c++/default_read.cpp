@@ -1,6 +1,6 @@
 #include <iostream>
 
-int add(int a = 4, int b, int c = 4)
+int add(int a = 4, int b = 4, int c = 4)
 {
 	return a + b + c;
 }
