@@ -18,5 +18,7 @@ int main()
     std::cout <<" type of struct fundamental " << (std::is_fundamental<s>::value ? "true" : "false") << std::endl;
     std::cout <<" type of uint32_t fundamental " << (std::is_fundamental<uint32_t>::value ? "true" : "false") << std::endl;
     std::cout <<" type of s_  fundamental " << (std::is_fundamental<s_>::value ? "true" : "false") << std::endl;
+
+    std::cout <<" type of std::nullptr fundamental " << (std::is_fundamental<std::nullptr_t>::value ? "true" : "false") << std::endl;
 }
 
