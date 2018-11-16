@@ -1,3 +1,8 @@
+/**
+ * Author: Devendra Naga (devendra.aaru@gmail.com)
+ * 
+ * License: Apache
+ */
 #include <iostream>
 #include <bitset>
 
