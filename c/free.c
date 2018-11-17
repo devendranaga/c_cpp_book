@@ -5,7 +5,7 @@ int main()
 {
     int *i;
 
-    i = malloc(sizeof(int));
+    i = calloc(1, sizeof(int));
     if (!i) {
         return -1;
     }
@@ -13,5 +13,7 @@ int main()
     *i = 10;
 
     printf("value i %d\n", *i);
+
+    free(i);
 }
 
