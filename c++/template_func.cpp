@@ -1,0 +1,33 @@
+#include <iostream>
+
+template <typename T>
+T add(T a, T b)
+{
+    return a + b;
+}
+
+template <typename T1, typename T2>
+T1 add(T1 a, T2 b)
+{
+    return a + b;
+}
+
+int main()
+{
+    int a = 4;
+    int b = 5;
+
+    std::cout << "add(int " << a << ", int " << b << ") " << add(a, b) << std::endl;
+
+    double a1 = 4.4;
+    double a2 = 5.5;
+
+    std::cout << "add(double " << a1 << ", double " << a2 << ") " << add(a1, a2) << std::endl;
+
+    std::cout << "add(double " << a1 << ", int " << a << ") " << add(a1, a) << std::endl;
+
+    std::cout << "add(int " << a1 << ", double " << b << ") " << add(a1, b) << std::endl;
+    std::cout << "add(int " << a << ", double " << a2 << ") " << add(a, a2) << std::endl;
+
+}
+
