@@ -4,6 +4,17 @@
 #include <string.h>
 #include <hash.h>
 
+// print all elements in the list
+void hash_print(void *item)
+{
+    int *i = item;
+
+    printf("%d ", *i);
+}
+
+
+// hash function
+//
 uint32_t hash_this(void *item)
 {
     int *val = item;
@@ -11,10 +22,12 @@ uint32_t hash_this(void *item)
     uint32_t hash_val = 0;
     int i;
 
+    // for each character .. compiute the hash value by adding all characters to the number
     for (i = 0; i < strlen(magic); i ++) {
         hash_val += (*val) + magic[i];
     }
 
+    // return hash_value
     return hash_val;
 }
 
@@ -60,13 +73,15 @@ int main(int argc, char **argv)
         printf("item %d\n", *item);
     }
 
+    hash_table_delete_item(&var[99], hash_this, hash_print);
+
     // maximum size of a chain within the hash table due to collision
 
     hash_table_print_max_list();
 
     // free all hash table elements.. run it through valgrind
     //
-    hash_table_free(hash_tbl);
+    hash_table_free(hash_tbl, hash_print);
 }
 
 
