@@ -1,3 +1,11 @@
+/**
+ * 
+ * demo program for a sliding window algorithm
+ *
+ * Author: Devendra Naga <devendra.aaru@gmail.com>
+ * 
+ * Copyright: Apache
+ */
 #include <stdio.h>
 #include <stdlib.h>
 
