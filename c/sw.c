@@ -25,6 +25,8 @@ struct sliding_window_ds {
     struct sliding_window *cur;
     // old pointer for making links
     struct sliding_window *prev;
+
+    struct sliding_window *reader;
 };
 
 // create a fixed sliding window of given length
@@ -64,6 +66,7 @@ void * sliding_window_create(int size)
 
     // point the cur to head
     sw->cur = sw->head;
+    sw->reader = sw->head;
 
     return sw;
 }
