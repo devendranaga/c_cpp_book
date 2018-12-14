@@ -18,7 +18,8 @@ int main()
 {
     copy_constr a(4);
     copy_constr a1(a);
+    copy_constr a11 { a1 };
 
-    std::cout << "a.v: " << a.get_v() << "  a1.v: " << a1.get_v() << std::endl;
+    std::cout << "a.v: " << a.get_v() << "  a1.v: " << a1.get_v() << "   a2.v: " << a11.get_v() << std::endl;
 }
 
