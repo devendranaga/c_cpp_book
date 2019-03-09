@@ -1,3 +1,7 @@
+/**
+ * Author: Devendra Naga (devendra.aaru@gmail.com)
+ * License Apache
+ */
 #include <iostream>
 
 struct s {
